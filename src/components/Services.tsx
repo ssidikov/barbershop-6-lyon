@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const services = [
@@ -59,45 +56,30 @@ export default function Services() {
     <section id="services" className="py-24 md:py-32 bg-[#0a0a0a] relative">
       {/* Background abstract element */}
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-gold-600/5 blur-[150px] pointer-events-none rounded-full"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-20">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center gap-4 mb-4"
-          >
+          <div className="flex items-center justify-center gap-4 mb-4">
             <div className="w-8 h-px bg-gold-400"></div>
             <span className="text-gold-400 font-medium tracking-[0.2em] uppercase text-sm">Notre Carte</span>
             <div className="w-8 h-px bg-gold-400"></div>
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-heading font-bold text-white uppercase tracking-tight"
-          >
-            Prestations & Tarifs
-          </motion.h2>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white uppercase tracking-tight">
+            Prestations &amp; Tarifs
+          </h2>
         </div>
 
         {/* Masonry or flexible grid for items */}
         <div className="columns-1 md:columns-2 gap-8 space-y-8">
           {services.map((section, sectionIdx) => (
-            <motion.div 
+            <div
               key={sectionIdx}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: (sectionIdx % 3) * 0.1, duration: 0.8 }}
               className="bg-[#111] p-8 md:p-10 border border-white/5 hover:border-gold-400/20 transition-colors duration-500 break-inside-avoid"
             >
               <h3 className="text-xl font-heading font-bold text-white mb-6 pb-4 border-b border-white/10 uppercase tracking-widest text-center">
                 {section.category}
               </h3>
-              
+
               <div className="space-y-6">
                 {section.items.map((item, itemIdx) => (
                   <div key={itemIdx} className="group">
@@ -111,17 +93,11 @@ export default function Services() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="mt-20 flex justify-center"
-        >
+
+        <div className="mt-20 flex justify-center">
           <a
             href="https://www.planity.com/6th-barbershop-cours-lafayette-69003-lyon"
             target="_blank"
@@ -131,7 +107,7 @@ export default function Services() {
             Réserver sur Planity
             <ExternalLink className="w-4 h-4" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

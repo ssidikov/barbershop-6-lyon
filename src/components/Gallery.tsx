@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
 
 // Remplacez ces chemins par les photos téléchargées depuis Google Maps
 // et placez-les dans le dossier 'public' de votre projet (ex: public/gallery/photo1.webp)
 const images = [
-  "/gallery/photo1.webp", 
+  "/gallery/photo1.webp",
   "/gallery/photo2.webp",
   "/gallery/photo3.webp",
   "/gallery/photo4.webp",
@@ -18,8 +18,6 @@ const fallbackImages = [
   "https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?q=80&w=1200&auto=format&fit=crop",
 ];
-
-import { useState } from "react";
 
 export default function Gallery() {
   const [imgSources, setImgSources] = useState([...images]);
@@ -48,16 +46,11 @@ export default function Gallery() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {imgSources.map((src, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
               className="relative aspect-square overflow-hidden group cursor-pointer bg-[#111]"
             >
-              {/* Using standard img for onError capability, with absolute positioning */}
-              <img 
+              <img
                 src={src}
                 alt={`Gallery image ${i + 1}`}
                 onError={() => handleImageError(i)}
@@ -67,7 +60,7 @@ export default function Gallery() {
                 <span className="text-gold-400 text-3xl font-light mb-2">+</span>
                 <span className="text-white text-xs uppercase tracking-widest font-medium">Agrandir</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

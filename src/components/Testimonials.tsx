@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const reviews = [
@@ -26,9 +23,9 @@ export default function Testimonials() {
     <section id="reviews" className="py-24 bg-[#0a0a0a] relative overflow-hidden">
       {/* Decorative quotes */}
       <div className="absolute top-10 left-10 text-[10rem] font-heading text-white/[0.02] leading-none select-none pointer-events-none">
-        "
+        &ldquo;
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -46,12 +43,8 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2, duration: 0.6 }}
               className="bg-[#111] p-8 border border-white/5 relative"
             >
               <div className="flex gap-1 mb-6">
@@ -60,13 +53,13 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-gray-300 mb-8 font-light italic leading-relaxed text-sm md:text-base">
-                "{review.text}"
+                &ldquo;{review.text}&rdquo;
               </p>
               <div className="flex items-center justify-between border-t border-white/10 pt-4">
                 <span className="text-white font-medium">{review.name}</span>
                 <span className="text-gray-500 text-xs">{review.date}</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

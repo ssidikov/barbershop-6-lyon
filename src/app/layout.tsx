@@ -34,6 +34,7 @@ export default function RootLayout({
     <html
       lang="fr"
       className={`${inter.variable} ${oswald.variable} scroll-smooth dark`}
+      suppressHydrationWarning
     >
       <body className="min-h-screen bg-black text-slate-100 flex flex-col font-sans antialiased selection:bg-amber-600 selection:text-white">
         <Loader />
