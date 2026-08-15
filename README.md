@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💈 Lyon Barbershop 6ème — Website
 
-## Getting Started
+A modern, high-end web experience for **Lyon Barbershop 6ème** (6TH Barbershop), an upscale men's grooming salon located on Cours Lafayette in Lyon, France.
 
-First, run the development server:
+Built with **Next.js 16 (App Router)**, **React 19**, **Tailwind CSS v4**, and **Framer Motion**.
+
+---
+
+## ✨ Features
+
+- **Luxury Dark Aesthetics**: Custom luxury theme with gold accents, refined typography (Oswald & Inter), and subtle micro-animations.
+- **Hero & Intro**: Engaging hero section with smooth entrance animations and quick call-to-actions.
+- **Service Menu & Pricing**: Comprehensive list of services (haircuts, beard styling, Brazilian smoothing, coloration, facial care) with transparent pricing.
+- **Direct Planity Integration**: Direct booking CTA links connected to the salon's Planity booking page.
+- **Interactive Portfolio / Gallery**: Showcase of salon ambiance and haircuts with graceful fallback handling.
+- **Customer Reviews**: Testimonial showcase highlighting 5/5 Google Maps ratings.
+- **Contact & Google Maps**: Embedded interactive map, salon address, opening hours, and phone contact.
+- **Animated Preloader**: Polished opening transition loader with brand identity.
+- **Fully Responsive**: Optimized for all viewports from mobile smartphones to ultra-wide desktop displays.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Typography**: [Google Fonts](https://fonts.google.com/) (`Oswald` for headings, `Inter` for body)
+
+---
+
+## 📁 Project Structure
+
+```text
+barbershop-6-lyon/
+├── public/
+│   └── gallery/            # Salon photos and asset images
+├── src/
+│   ├── app/
+│   │   ├── globals.css     # Global styles & Tailwind v4 theme configuration
+│   │   ├── layout.tsx      # Root layout, Google fonts, and SEO metadata
+│   │   └── page.tsx        # Main landing page
+│   └── components/
+│       ├── About.tsx       # Salon story & philosophy
+│       ├── Contact.tsx     # Location, opening hours & Google Maps embed
+│       ├── Footer.tsx      # Footer navigation & social links
+│       ├── Gallery.tsx     # Portfolio photo grid
+│       ├── Hero.tsx        # Hero banner with primary CTA
+│       ├── Loader.tsx      # Animated initial loading screen
+│       ├── Navbar.tsx      # Sticky responsive navigation with mobile drawer
+│       ├── Services.tsx    # Services catalog & pricing
+│       └── Testimonials.tsx# Google customer testimonials
+├── next.config.ts          # Next.js configuration
+├── package.json            # Dependencies and scripts
+└── tsconfig.json           # TypeScript configuration
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have **Node.js** (v18.18 or higher recommended) and **npm** installed.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ssidikov/barbershop-6-lyon.git
+   cd barbershop-6-lyon
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development Server
+
+Run the development server with:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create an optimized production build:
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Linting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📍 Salon Information
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Name**: Lyon Barbershop 6ème / 6TH Barbershop
+- **Address**: 316 Cours Lafayette, 69003 Lyon, France
+- **Hours**:
+  - Monday – Saturday: 09:00 – 20:00
+  - Sunday: 10:00 – 16:00
+- **Booking**: [Planity Profile](https://www.planity.com/6th-barbershop-cours-lafayette-69003-lyon)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 License
+
+Private repository. All rights reserved.
