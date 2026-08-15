@@ -69,6 +69,7 @@ Ensure you have **Node.js** (v18.18 or higher recommended) and **npm** installed
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/ssidikov/barbershop-6-lyon.git
    cd barbershop-6-lyon
@@ -114,9 +115,3 @@ npm run lint
   - Monday – Saturday: 09:00 – 20:00
   - Sunday: 10:00 – 16:00
 - **Booking**: [Planity Profile](https://www.planity.com/6th-barbershop-cours-lafayette-69003-lyon)
-
----
-
-## 📄 License
-
-Private repository. All rights reserved.
